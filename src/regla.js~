@@ -77,7 +77,7 @@ var Regla = function (regla) {
 	//Resuelve la consulta si aplica y sino tira una excepcion.
 	this.checkQuery = function(consulta, arregloHechos)
 	{
-		consulta = Normalizar(consulta);
+		consulta = this.normalizarRegla(consulta);
 
 		if(!this.validarEquivalenciaReglaConsulta(consulta))
 			throw "La consulta no es aplicable";		
